@@ -5,7 +5,7 @@ module Levenshtein
     extend FFI::Library
 
     # Try loading in order.
-    library = File.dirname(__FILE__) + '/levenshtein'
+    library = File.dirname(__FILE__) + '../ext/levenshtein'
     candidates = ['.bundle', '.so', '.dylib', ''].map { |ext| library + ext }
     ffi_lib(candidates)
 
